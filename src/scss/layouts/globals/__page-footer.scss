@@ -1,0 +1,106 @@
+.b-footer {
+  position: relative;
+  width: 100%;
+  background: $white-smoke;
+  @include px-for-rem(50, padding-bottom);
+  overflow: hidden;
+  &__container {
+    margin: 0 auto;
+    width: 80%;
+    &-social {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include px-for-rem(40px 0, padding);
+      border-bottom: 1px solid $border;
+      z-index: 9;
+      &__logo {
+        cursor: pointer;
+      }
+      &__links {
+        ul {
+          display: flex;
+          li {
+            &:not(:last-of-type) {
+              @include px-for-rem(20, margin-right);
+            }
+            svg {
+              cursor: pointer;
+              &:hover {
+                path {
+                  fill: $gray-darker;
+                  @include transition(.55s fill);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__categories {
+    position: relative;
+    margin: 40px auto 0;
+    width: 80%;
+    z-index: 9;
+    &-container {
+      display: flex;
+      justify-content: space-between;
+      > div {
+        @include for-mobile {
+          @include px-for-rem(36, margin-bottom);
+        }
+      }
+      h5 {
+        @include px-for-rem(26, margin-bottom);
+        font-family: 'Karla', sans-serif;
+        @include px-for-rem(14, font-size);
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $gray-light;
+      }
+      h6 {
+        @include px-for-rem(12, margin-bottom);
+        font-family: 'Karla', sans-serif;
+        @include px-for-rem(14, font-size);
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $gray-darker;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      @include for-mobile {
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    @include for-mobile {
+      text-align: center;
+    }
+  }
+  &__pattern {
+    position: absolute;
+    @include px-for-rem(0, top);
+    @include px-for-rem(0, left);
+    
+    @include for-mobile {
+      display: none;
+    }
+  }
+  &__pattern-mobile {
+    position: absolute;
+    @include px-for-rem(0, top);
+    @include px-for-rem(0, left);
+    width: 100%;
+    > svg {
+      width: 100%;
+    }
+
+    @include for-desktop {
+      display: none;
+    }
+  }
+}

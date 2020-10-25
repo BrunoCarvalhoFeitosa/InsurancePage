@@ -1,0 +1,55 @@
+include subtemplates/__page-header.pug
+section.b-hero
+  div.b-hero__container
+    div.b-hero__container-text
+      hr
+      h2 Humanizando
+      h2 sua segurança.
+      p Obtenha seu plano de seguro de vida mais fácil e rápido. Combinamos nossa experiência e tecnologia para ajudá-lo a encontrar o plano certo para você. Certifique-se de que você e seus entes queridos estão protegidos.
+      button Ver Planos
+    div.b-hero__container-image
+      img(src='../images/hero.jpg', alt='Família segura')/
+    div.b-hero__left-pattern
+      include ../images/icon-hero-pattern-left.svg
+    div.b-hero__left-pattern-mobile
+      include ../images/icon-hero-pattern-left-mobile.svg
+    div.b-hero__right-pattern
+      include ../images/icon-hero-pattern-right.svg
+    div.b-hero__right-pattern-mobile
+      include ../images/icon-hero-pattern-right-mobile.svg
+section.b-different
+  div.b-different__container
+    div.b-different__container-title
+      hr
+      h3 Somos diferentes
+    div.b-different__container-description
+      div.b-different__container-description__snappy
+        include ../images/icon-snappy-process.svg
+        h4 Processo Rápido
+        p Nosso processo de inscrição pode ser concluído em minutos, não horas. Não fique preso ao preencher formulários tediosos
+      div.b-different__container-description__prices
+        include ../images/icon-affordable-prices.svg
+        h4 Preços Acessíveis
+        p Não queremos que você se preocupe com altos custos mensais. Nossos preços podem ser baixos, mas ainda oferecemos a melhor cobertura possível.
+      div.b-different__container-description__people
+        include ../images/icon-people-first.svg
+        h4 Pessoas Primeiro
+        p Nossos planos não estão cheios de condições e cláusulas para evitar pagamentos. Garantimos que você esteja coberto quando e onde precisar.
+section.b-find
+  div.b-find__container
+    div.b-find__container-text
+      h4 Saiba mais
+      h4 como nós trabalhamos
+    div.b-find__container-cta
+      div.b-find__container-cta__pattern
+        include ../images/icon-how-we-work-pattern.svg
+      div.b-find__container-cta__pattern-mobile
+        include ../images/icon-how-we-work-pattern-mobile.svg
+      button Como trabalhamos
+include subtemplates/__page-footer.pug
+
+script(src='../js/index.js')
+
+
+
+

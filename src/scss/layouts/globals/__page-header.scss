@@ -1,0 +1,121 @@
+.b-header {
+  width: 100%;
+  background: $white;
+  &__container {
+    margin: 0 auto;
+    @include px-for-rem(26px 0, padding);
+    width: 86%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-logo {
+      cursor: pointer;
+    }
+    &-links {
+      position: relative;
+      ul {
+        display: flex;
+        align-items: center;
+        li {
+          @include px-for-rem(20, margin-right);
+          font-family: 'Karla', sans-serif;
+          @include px-for-rem(16, font-size);
+          font-weight: 700;
+          text-transform: uppercase;
+          color: $gray-light;
+          cursor: pointer;
+          > strong {
+            color: $purple-darker;
+
+            @include for-mobile {
+              color: $white;
+            }
+          }
+          > button {
+            @include px-for-rem(12px 30, padding);
+            background: $purple-darker;
+            font-family: 'Karla', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $white;
+            @include animation(pulsePlans 1s infinite);
+            @include transition(.5s opacity);
+            cursor: pointer;
+
+            @include for-mobile {
+              @include px-for-rem(18, font-size);
+              border: 1px solid $white;
+            }
+            &:hover {
+              opacity: .8;
+            }
+          }
+          &:last-of-type {
+            position: absolute;
+            @include px-for-rem(0, bottom);
+            @include px-for-rem(0, left);
+            @include px-for-rem(0, right);
+            > svg {
+              width: 100%;
+            }
+
+            @include for-desktop {
+              display: none;
+            }
+
+            @include for-tablet {
+              display: none;
+            }
+          }
+          @include for-mobile {
+            margin-right: initial;
+            @include px-for-rem(52, margin-bottom);
+            @include px-for-rem(18, font-size);
+            color: $white;
+          }
+        }
+        @include for-mobile {
+          flex-direction: column;
+          @include px-for-rem(52, margin-top);
+        }
+      }
+      @include for-mobile {
+        display: none;
+        position: fixed;
+        @include px-for-rem(88, top);
+        @include px-for-rem(0, left);
+        width: 100%;
+        height: 100vh;
+        background: $purple-darker;
+        z-index: 99;
+      }
+    }
+    &-hamburger {
+      @include for-desktop {
+        display: none;
+      }
+      
+      @include for-tablet {
+        display: none;
+      }
+    }
+    &-close-menu {
+      @include for-mobile {
+        display: none;
+      }
+
+      @include for-tablet {
+        display: none;
+      }
+
+      @include for-desktop {
+        display: none;
+      }
+    }
+  }
+  @include for-mobile {
+    position: fixed;
+    top: 0;
+    z-index: 99
+  }
+}

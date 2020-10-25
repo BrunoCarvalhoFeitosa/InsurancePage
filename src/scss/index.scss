@@ -1,0 +1,324 @@
+@import './layouts/globals/_globals';
+@import './layouts/globals/_mixins';
+@import './layouts/globals/_fonts';
+@import './layouts/globals/_colors';
+@import './layouts/globals/_page-header';
+@import './layouts/globals/_page-footer';
+
+.b-hero {
+  position: relative;
+  width: 100%;
+  background: $purple-darker;
+  &__container {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-text {
+      position: relative;
+        @include px-for-rem(40, margin-right);
+      > hr {
+        position: absolute;
+        @include px-for-rem(-60, top);
+        @include px-for-rem(0.2, height);
+        @include px-for-rem(140, width);
+
+        @include for-mobile {
+          display: none;
+        }
+      }
+      > h2 {
+        font-family: 'DM Serif Display', sans-serif;
+        @include px-for-rem(64, font-size);
+        font-weight: 500;
+        @include px-for-rem(3, letter-spacing);
+        color: $white-smoke;
+
+        @include for-mobile {
+          @include px-for-rem(34, font-size);
+          text-align: center;
+        }
+
+        @include for-tablet {
+          @include px-for-rem(28, font-size);
+        }
+      }
+      > p {
+        @include px-for-rem(20, margin-top);
+        font-family: 'Karla', sans-serif;
+        @include px-for-rem(12, font-size);
+        font-weight: lighter;
+        @include px-for-rem(18, line-height);
+        color: $white-smoke;
+
+        @include for-mobile {
+          text-align: center;
+        }
+      }
+      > button {
+        @include px-for-rem(22, margin-top);
+        background: $white;
+        @include px-for-rem(10px 30, padding);
+        font-family: 'Karla', sans-serif;
+        @include px-for-rem(14, font-size);
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $gray-darker;
+        @include transition(.5s opacity);
+        cursor: pointer;
+        &:hover {
+          opacity: .8;
+        }
+
+        @include for-mobile {
+          position: relative;
+          left: 50%;
+          @include transform(translateX(-50%));
+          background: transparent;
+          border: 1px solid $white;
+          color: $white;
+        }
+      }
+      @include for-mobile {
+        order: 2;
+        @include px-for-rem(0, margin-right);
+        @include px-for-rem(60px 30, padding);
+      }
+    }
+    &-image {
+      > img {
+        @include transform(translateY(100px));
+        @include transition(.7s transform);
+        &:hover {
+          @include transform(scale(1.03) translateY(100px));
+          
+          @include for-mobile {
+            transform: inherit;
+          }
+        }
+        @include for-mobile {
+          @include transform(translateY(0px));
+          width: 100%;
+        }
+
+        @include for-tablet {
+          @include px-for-rem(446, width);
+        }
+      }
+      @include for-mobile {
+        order: 1;
+      }
+    }
+    @include for-mobile {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+  &__left-pattern {
+    position: absolute;
+    @include px-for-rem(-310, bottom);
+    @include px-for-rem(0, left);
+
+    @include for-mobile {
+      display: none;
+    }
+  }
+  &__right-pattern {
+    position: absolute;
+    @include px-for-rem(0, top);
+    @include px-for-rem(0, right);
+    
+    @include for-mobile {
+      display: none;
+    }
+  }
+  &__left-pattern-mobile {
+    position: absolute;
+    @include px-for-rem(500, top);
+    @include px-for-rem(0, left);
+
+    @include for-desktop {
+      display: none;
+    }
+
+    @include for-tablet {
+      display: none;
+    }
+  }
+  &__right-pattern-mobile {
+    position: absolute;
+    @include px-for-rem(-240, bottom);
+    @include px-for-rem(0, right);
+
+    @include for-desktop {
+      display: none;
+    }
+
+    @include for-tablet {
+      display: none;
+    }
+  }
+}
+
+.b-different {
+  width: 100%;
+  background: $white;
+  &__container {
+    position: relative;
+    @include px-for-rem(320px auto 0, margin);
+    width: 80%;
+    &-title {
+      > hr {
+        position: absolute;
+        @include px-for-rem(0, left);
+        @include px-for-rem(-40, top);
+        @include px-for-rem(140, width);
+        background: $purple-darker;
+
+        @include for-mobile {
+          left: 50%;
+          @include transform(translateX(-50%));
+        }
+      }
+      > h3 {
+        font-family: 'DM Serif Display', sans-serif;
+        @include px-for-rem(64, font-size);
+        font-weight: 500;
+        @include px-for-rem(3, letter-spacing);
+        color: $gray-darker;
+
+        @include for-mobile {
+          @include px-for-rem(34, font-size);
+          text-align: center;
+        }
+      }
+    }
+    &-description {
+      margin: 80px auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      > div {
+        @include for-mobile {
+          @include px-for-rem(56, margin-bottom);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        @include for-tablet {
+          &:nth-of-type(2) {
+            @include px-for-rem(0px 30, margin);
+          }
+        }
+      }
+       svg {
+        @include px-for-rem(30, margin-bottom);
+      }
+      h4 {
+        @include px-for-rem(18, margin-bottom);
+        font-family: 'DM Serif Display', sans-serif;
+        @include px-for-rem(28, font-size);
+        font-weight: 500;
+        color: $gray-darker;
+      }
+      p {
+        font-family: 'Karla', sans-serif;
+        @include px-for-rem(14, font-size);
+        @include px-for-rem(20, line-height);
+        color: $gray-light;
+
+        @include for-mobile {
+          text-align: center;
+        }
+      }
+
+      @include for-mobile {
+        flex-direction: column;
+      }
+    }
+    @include for-mobile {
+      @include px-for-rem(166px auto 0, margin);
+    }
+  }
+}
+
+.b-find {
+  @include px-for-rem(120px 0, padding);
+  width: 100%;
+  background: $white;
+  &__container {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $purple-darker;
+    overflow: hidden;
+    &-text {
+      > h4 {
+        @include px-for-rem(60, padding-left);
+        font-family: 'DM Serif Display', sans-serif;
+        @include px-for-rem(34, font-size);
+        font-weight: 500;
+        @include px-for-rem(3, letter-spacing);
+        color: $white;
+      }
+    }
+    &-cta {
+      &__pattern {
+        @include for-mobile {
+          display: none;
+        }
+      }
+      &__pattern-mobile {
+        position: absolute;
+        @include px-for-rem(0, top);
+        @include px-for-rem(0, right);
+
+        @include for-desktop {
+          display: none;
+        }
+
+        @include for-tablet {
+          display: none;
+        }
+      }
+      button {
+        @include px-for-rem(14px 30, padding);
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        @include px-for-rem(80, right);
+        font-family: 'Karla', sans-serif;
+        @include px-for-rem(14, font-size);
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $gray-darker;
+        @include transition(.5s opacity);
+        cursor: pointer;
+        &:hover {
+          opacity: .9;
+        }
+
+        @include for-mobile {
+          @include px-for-rem(40, margin-top);
+          position: initial;
+          transform: initial;
+          background: transparent;
+          border: 1px solid $white;
+          color: $white;
+        }
+      }
+    }
+    @include for-mobile {
+      flex-direction: column;
+      @include px-for-rem(50px 0, padding);
+    }
+  }
+  @include for-mobile {
+    @include px-for-rem(70px 0, padding);
+  }
+}

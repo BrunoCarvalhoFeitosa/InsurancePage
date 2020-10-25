@@ -1,0 +1,32 @@
+doctype html
+html(lang="pt-br")
+  head
+    meta(charset="UTF-8")/
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")/
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")/
+    meta(name="author", content="Bruno Carvalho Feitosa")/
+    meta(name="description", content="Site institucional modelo para empresas seguradoras")/
+    meta(name="keywords", content="Site institucional, empresas segurados")/
+    link(rel="stylesheet", type="text/css" href="css/index.css")/
+    link(rel="shortcut icon", type="image/png", href="../../images/fav.png")/
+    title Insure Seguros
+  body
+    header.b-header
+      div.b-header__container
+        div.b-header__container-logo
+          h1
+            include ../../images/insure-logo.svg
+        nav.b-header__container-links
+          ul
+            li Como trabalhamos
+            li Blog
+            li #[strong Login]
+            li #[button Ver Planos]
+            li 
+              include ../../images/icon-header-pattern-mobile.svg
+        div.b-header__container-hamburger
+          include ../../images/icon-hamburger.svg
+        div.b-header__container-close-menu
+          include ../../images/icon-close.svg
+              
+        
